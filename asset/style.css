@@ -132,148 +132,65 @@ table {
 #########################################################
 #########################################################
 ###################################################### */
-
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-
-@font-face {
-  font-family: "Norse";
-  src: url(Norse-Bold.otf);
+* {
+  outline: 1px solid rgb(0, 0, 0);
+  outline-offset: -1px;
 }
-.main-container {
+
+.container {
   display: grid;
-  grid-template-columns: auto 1fr;
-}
-.bg {
-  position: relative;
-}
-.logo_wrap {
-  position: absolute;
-  top: 150px;
-  background-color: rgba(17, 17, 17, 0.493);
-  color: white;
-
-  font-family: "Norse";
-  font-size: max(4em, 5vw);
-  padding: 10px 0px;
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.logo_wrap > img {
-  object-fit: cover;
-  width: auto;
-  height: 70px;
-}
-img {
-  object-fit: cover;
-  width: 40vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 2fr 2fr 2fr;
   height: 100vh;
+  grid-template-areas:
+    "sidebar  nav nav nav"
+    "sidebar content  content aside"
+    "sidebar  content content aside"
+    "sidebar  content content aside";
 }
 
+.sidebar {
+  grid-area: sidebar;
+  background-color: #a7f3d0;
+}
+.header {
+  grid-area: nav;
+  background-color: #34d399;
+}
 .content {
-  font-family: "Ubuntu", sans-serif;
+  grid-area: content;
+  background-color: #047857;
 }
-form {
-  border: 1px solid rgba(0, 0, 0, 0);
-  padding-left: 30px;
-  padding-right: 80px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-}
-form > p {
-  font-size: 30px;
-  padding-bottom: 10px;
-}
-ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding-top: 10px;
+.aside {
+  grid-area: aside;
+  background-color: #10b981;
 }
 
-.content > p:first-child {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 1.2em;
-  padding-left: 30px;
-  padding-right: 80px;
-  padding-top: 40px;
-  background-color: rgb(220, 224, 220);
-}
-.content > p:last-child {
-  font-size: 1.2em;
-  padding-left: 30px;
-}
-.content p:nth-child(2) {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 1.2em;
-  padding-left: 30px;
-  padding-right: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  background-color: rgb(220, 224, 220);
-}
-li {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-label {
-  text-transform: capitalize;
-  font-size: 1.1em;
-}
-button {
-  margin-top: 30px;
-  background-color: rgb(124, 197, 122);
-  color: rgb(0, 0, 0);
-  font-size: 1.5em;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 5px;
-  text-transform: capitalize;
-}
-button:hover {
-  background-color: rgb(101, 187, 98);
-}
-input {
-  border: 1px solid rgba(82, 82, 82, 0.329);
-  height: 26px;
-  border-radius: 4px;
-}
-input:focus {
-  outline: none;
-  border: none;
-  border: 2px solid rgb(25, 136, 43);
-}
-a {
-  text-decoration: none;
-}
-/* ##########################################3
-3############################################3 */
-
-@media only screen and (max-width: 768px) {
-  .main-container {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr;
-  }
-  img {
-    object-fit: cover;
-    width: 100vw;
-    height: 50vh;
-  }
-}
 @media only screen and (max-width: 480px) {
-  ul {
+  .container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding-top: 10px;
+    grid-template-rows: 1fr 1fr 4fr 2fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "content"
+      "aside";
+  }
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #a7f3d0;
+  }
+  .header {
+    grid-area: nav;
+    background-color: #34d399;
+  }
+  .content {
+    grid-area: content;
+    background-color: #047857;
+  }
+  .aside {
+    grid-area: aside;
+    background-color: #10b981;
   }
 }
