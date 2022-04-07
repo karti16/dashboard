@@ -160,17 +160,16 @@ table {
 }
 .header {
   grid-area: nav;
-  background-color: #ffffff;
+
   padding: 12px 30px;
   grid-row-gap: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .content {
   grid-area: content;
-  background-color: #047857;
 }
 .aside {
   grid-area: aside;
-  background-color: #10b981;
 }
 a {
   display: flex;
