@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="script.js" defer></script>
     <title>Dashboard</title>
   </head>
@@ -28,7 +32,33 @@
         <a href="#"><span class="mdi mdi-comment-question"></span>support</a>
         <a href="#"> <span class="mdi mdi-shield-star"></span>Privacy </a>
       </div>
-      <div class="header">Header</div>
+      <div class="header">
+        <div class="search">
+          <label for="search_bar"
+            ><img
+              class="search_icon"
+              src="https://img.icons8.com/ios/50/000000/search--v1.png"
+          /></label>
+          <input type="search" name="search_text" id="search_bar" />
+        </div>
+        <div class="notify">
+          <span class="mdi mdi-bell-ring-outline"></span>
+          <img src="asset/hinata.png" alt="hinata" />
+          <p>Morgan Oakley</p>
+        </div>
+        <div class="profile">
+          <img src="asset/hinata.png" alt="" />
+          <div class="p_name">
+            <p>Hi there,</p>
+            <p>Morgan Oakley (@morgan)</p>
+          </div>
+        </div>
+        <div class="post_button">
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+      </div>
       <div class="content">Content</div>
       <div class="aside">Aside</div>
     </div>
